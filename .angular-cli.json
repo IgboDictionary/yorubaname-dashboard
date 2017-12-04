@@ -17,8 +17,10 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "igbo",
       "styles": [
+        "theme.scss",
+        "assets/css/flexboxgrid.min.css",
         "styles.css"
       ],
       "scripts": [],

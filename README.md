@@ -1,27 +1,21 @@
 # IgbonameDashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+This application is an SPA built with Angular.
 
-## Development server
+# Requirements
+- [Angular 5+](https://angular.io)
+- [Angular CLI v1.5.5](https://github.com/angular/angular-cli)
+- [Angular Material 5.0.0](https://github.com/angular/material2)
+- [TypeScript 2.4.2](https://www.typescriptlang.org/)
+- [Node v6.6.0](https://nodejs.org/en/blog/release/v6.6.0/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Getting Started
 
-## Code scaffolding
+1. Clone the [github repository](git@github.com:IgboName/igboname-dashboard.git) to your project directory.
+2. cd to /your-project-directory/igboname-dashboard
+3. Run `npm install` to install all the application dependencies
+4. Run `ng serve` to start a development server, open your browser and navigate to `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To run the development server on a custom port(eg: `http://localhost:4201`), run `ng serve --port 4201`
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on how to use Angular CLI, type `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
