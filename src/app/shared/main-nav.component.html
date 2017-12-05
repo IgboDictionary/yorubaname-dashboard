@@ -1,0 +1,20 @@
+<button mat-button [matMenuTriggerFor]="menu">
+  Name Entries <mat-icon>arrow_drop_down</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <a mat-menu-item routerLink=".">
+    <span>Add Entries</span>
+  </a>
+  <a mat-menu-item routerLink=".">
+    <span>Published Names</span>
+  </a>
+  <a mat-menu-item routerLink=".">
+    <span>Unpublish Names</span>
+  </a>
+  <a mat-menu-item routerLink=".">
+    <span>Suggested Names</span>
+  </a>
+  <a mat-menu-item routerLink=".">
+    <span>Feedbacks</span>
+  </a>
+</mat-menu>

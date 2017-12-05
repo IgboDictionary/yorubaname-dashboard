@@ -9,13 +9,15 @@ import { SharedModule } from './shared/shared.module';
 import { DefaultLayoutComponent, SimpleLayoutComponent } from './layouts';
 import { AuthModule } from './auth/auth.module';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefaultLayoutComponent,
     SimpleLayoutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
