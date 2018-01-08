@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'igbo-footer',
+  selector: 'dict-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })

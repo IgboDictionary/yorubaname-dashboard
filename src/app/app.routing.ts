@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { DashboardComponent } from './dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 export const routes: Routes = [
     {
@@ -14,7 +15,8 @@ export const routes: Routes = [
     },
     {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivate: [AuthGuardService]
     },
     {
         path: 'auth',

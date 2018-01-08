@@ -1,17 +1,23 @@
 <div class="row center-xs">
-  <div class="col-xs-11 col-sm-6 col-md-4">
-    <mat-toolbar class="center-xs" color="primary">Dashboard Login</mat-toolbar>
+  <div class="col-xs-11 col-sm-5 col-md-4">
     <mat-card>
+      <img class="img-responsive logo" src="../assets/img/logo.jpg" alt="Dashboard" width="80">
+      <mat-card-header class="center-xs">
+        <mat-card-title>Enter your login details below</mat-card-title>
+        <mat-card-subtitle>For now, just use anything</mat-card-subtitle>
+      </mat-card-header>
+      <hr>
       <mat-card-content class="start-xs">
-        <form>
+        <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Email">
+            <input matInput type="email" placeholder="Email" formControlName="email">
           </mat-form-field>
     
           <mat-form-field class="full-width">
-            <input matInput placeholder="Password">
+            <input matInput type="password" placeholder="Password" formControlName="password">
           </mat-form-field>
-          <button mat-raised-button color="accent" class="full-width">Login</button>
+
+          <button mat-raised-button color="accent" class="full-width" [disabled]="!loginForm.valid">Login</button>
         </form>
       </mat-card-content>
     </mat-card>

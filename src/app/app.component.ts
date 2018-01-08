@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'igbo-root',
+  selector: 'dict-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

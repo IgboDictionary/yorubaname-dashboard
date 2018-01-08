@@ -1,3 +1,17 @@
-<p>
-  default-layout works!
-</p>
+<mat-drawer-container>
+  
+  <mat-drawer #sidenav class="sidenav">
+    <dict-sidenav></dict-sidenav>
+  </mat-drawer>
+
+  <dict-header></dict-header>
+
+  <dict-main-nav></dict-main-nav>
+
+  <div class="col-xs-12 main-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <dict-footer></dict-footer>
+
+</mat-drawer-container>

@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<mat-drawer-container>
+
+    <mat-drawer #sidenav class="sidenav">
+        <dict-sidenav></dict-sidenav>
+    </mat-drawer>
+
+    <div class="col-xs-12 main-content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <dict-footer></dict-footer>
+
+</mat-drawer-container>

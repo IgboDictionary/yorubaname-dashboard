@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'igbo-simple-layout',
+  selector: 'dict-simple-layout',
   templateUrl: './simple-layout.component.html',
   styleUrls: ['./simple-layout.component.css']
 })

@@ -1,27 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body{
-    margin: 0px auto;
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #EBF0F1;
-    color: #333;
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #EBF0F1;
+  color: #333;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
 }
 
 .full-width {
-    width: 100%;
+  width: 100%;
 }
-
-.side,
-md-sidenav {
+.mat-drawer-container {
+  background: #EBF0F1;
+}
+.side, mat-sidenav {
   background-color: #F2F2F2;
 }
-
 .fm {
   display: none !important;
 }
-
 .fd {
   display: inline-block !important;
+}
+.main-content {
+  margin: 10px 0px;
+}
+.row {
+  margin: 0px !important;
+}
+@media screen and (max-width: 767px) {
+  .fm {
+    display: inline-block !important;
+  }
+  .fd {
+    display: none !important;
+  }
 }

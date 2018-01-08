@@ -1,20 +1,27 @@
-<mat-toolbar color="primary" class="mat-elevation-z4">
+<mat-toolbar color="primary" class="row center-xs header">
   <div class="col-xs-3 start-xs">
-    <a routerLink="/">
-      <img class="logo" src="../assets/img/logo.png" alt="Dashboard" height="35">
+    <a routerLink="/" class="logo">
+      <!-- <img class="logo" src="../assets/img/logo.jpg" alt="Dashboard" height="35"> -->
+      <h2>Dictionary Dashboard</h2>
     </a>
   </div>
-  <div class="col-xs-7 center-xs">
-    <igbo-main-nav></igbo-main-nav>
+  <div class="col-xs-6 center-xs">
+    <dict-main-nav></dict-main-nav>
   </div>
-  <div class="col-xs-2 end-xs">
+  <div class="col-xs-3 end-xs">
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <a mat-menu-item routerLink=".">
-        <span>Logout</span>
+      <a mat-menu-item routerLink="/auth/login" *ngIf="!authService.isAuthenticated()">
+        <span>Login</span>
       </a>
+      <a mat-menu-item routerLink="/auth/account" *ngIf="authService.isAuthenticated()">
+        <span>Account</span>
+      </a>
+      <button mat-menu-item (click)="onLogout()" *ngIf="authService.isAuthenticated()">
+        <span>Logout</span>
+      </button>
     </mat-menu>
   </div>
 </mat-toolbar>

@@ -1,1 +1,15 @@
-<igbo-header></igbo-header>
+<mat-drawer-container>
+
+    <mat-drawer #sidenav class="sidenav">
+        <dict-sidenav></dict-sidenav>
+    </mat-drawer>
+
+    <dict-header></dict-header>
+
+    <div class="col-xs-12 main-content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <dict-footer></dict-footer>
+
+</mat-drawer-container>
