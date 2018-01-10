@@ -1,3 +1,43 @@
-<p>
-  sidenav works!
-</p>
+<mat-nav-list class="side-nav">
+  <mat-toolbar color="primary">
+    <h3 mat-subheader>MENU</h3>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLink="/dashboard">
+    <mat-icon mat-list-icon>dashboard</mat-icon>
+    <h4 mat-line>Dashboard</h4>
+  </a>
+  <a mat-list-item routerLink="/names/all-names">
+    <mat-icon mat-list-icon>list</mat-icon>
+    <h4 mat-line>All Names</h4>
+  </a>
+  <a mat-list-item routerLink="/names/new">
+    <mat-icon mat-list-icon>add_circle</mat-icon>
+    <h4 mat-line>Add Entries</h4>
+  </a>
+  <a mat-list-item routerLink="/names/published">
+    <mat-icon mat-list-icon>check_circle</mat-icon>
+    <h4 mat-line>Published Names</h4>
+  </a>
+  <a mat-list-item routerLink="/names/unpublished">
+    <mat-icon mat-list-icon>highlight_off</mat-icon>
+    <h4 mat-line>Unpublished Names</h4>
+  </a>
+  <a mat-list-item routerLink="/names/suggestions">
+    <mat-icon mat-list-icon>pan_tool</mat-icon>
+    <h4 mat-line>Suggested Names</h4>
+  </a>
+  <a mat-list-item routerLink="/names/feedbacks">
+    <mat-icon mat-list-icon>feedback</mat-icon>
+    <h4 mat-line>Feedbacks</h4>
+  </a>
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLink="/auth/account">
+    <mat-icon mat-list-icon>person</mat-icon>
+    <h4 mat-line>My Account</h4>
+  </a>
+  <a mat-list-item (click)="onLogout()">
+    <mat-icon mat-list-icon>lock_open</mat-icon>
+    <h4 mat-line>Logout</h4>
+  </a>
+</mat-nav-list>

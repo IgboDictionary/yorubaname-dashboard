@@ -1,17 +1,46 @@
-<mat-drawer-container>
-  
-  <mat-drawer #sidenav class="sidenav">
-    <dict-sidenav></dict-sidenav>
+<mat-drawer-container autosize>
+  <mat-drawer #sidenav class="dict-sidenav" mode="side" opened="true">
+    <span *ngIf="authService.isAuthenticated()">
+      <dict-sidenav></dict-sidenav>
+    </span>
   </mat-drawer>
 
-  <dict-header></dict-header>
+  <mat-toolbar color="primary" class="row header" *ngIf="authService.isAuthenticated()">
+    <div class="col-xs-2 start-xs">
+      <span class="link" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </span>
+    </div>
+    <div class="col-xs-8 center-xs">
+      <a routerLink="/dashboard" class="logo">
+        <!-- <img class="logo" src="../assets/img/logo.jpg" alt="Dashboard" height="35"> -->
+        <h4>Dictionary Dashboard</h4>
+      </a>
+    </div>
+    <div class="col-xs-2 end-xs">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/auth/login" *ngIf="!authService.isAuthenticated()">
+          <span>Login</span>
+        </a>
+        <a mat-menu-item routerLink="/auth/account" *ngIf="authService.isAuthenticated()">
+          <span>Account</span>
+        </a>
+        <button mat-menu-item (click)="onLogout()" *ngIf="authService.isAuthenticated()">
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
 
-  <dict-main-nav></dict-main-nav>
-
-  <div class="col-xs-12 main-content">
-    <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-xs-12 main-content">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-xs-12">
+      <dict-footer></dict-footer>
+    </div>
   </div>
-
-  <dict-footer></dict-footer>
-
 </mat-drawer-container>

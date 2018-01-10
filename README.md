@@ -18,4 +18,6 @@ This application is an SPA built with Angular.
 
 To run the development server on a custom port(eg: `http://localhost:4201`), run `ng serve --port 4201`
 
+To connect the dashboard to the website-apis, follow the instructions in this [Read Me](https://github.com/Yorubaname/yorubaname-website)
+
 To get more help on how to use Angular CLI, type `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

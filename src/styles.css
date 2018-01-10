@@ -12,33 +12,33 @@ html, body{
   max-width: 100%;
   height: auto;
 }
-
 .full-width {
   width: 100%;
 }
 .mat-drawer-container {
   background: #EBF0F1;
 }
-.side, mat-sidenav {
-  background-color: #F2F2F2;
+.row {
+  margin: 0px auto;
 }
-.fm {
-  display: none !important;
-}
-.fd {
-  display: inline-block !important;
+.side-nav {
+  min-width: 30%;
 }
 .main-content {
-  margin: 10px 0px;
+  min-height: 600px;
 }
-.row {
-  margin: 0px !important;
+.link {
+  cursor: pointer;
 }
-@media screen and (max-width: 767px) {
-  .fm {
-    display: inline-block !important;
-  }
-  .fd {
-    display: none !important;
-  }
+.snackbar-error {
+  background-color: rgb(212, 7, 7) !important;
+  color: #ffffff !important;
+}
+.snackbar-warning {
+  background-color: yellow !important;
+  color: #272727 !important;
+}
+.snackbar-success {
+  background-color: rgb(7, 212, 127) !important;
+  color: #272727 !important;
 }

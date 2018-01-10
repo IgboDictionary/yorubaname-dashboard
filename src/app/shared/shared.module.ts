@@ -11,10 +11,10 @@ import {
   MatIconModule,
   MatMenuModule,
   MatSidenavModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatListModule
 } from '@angular/material';
 import { FooterComponent } from './footer.component';
-import { MainNavComponent } from './main-nav.component';
 import { HeaderComponent } from './header.component';
 import { SidenavComponent } from './sidenav.component';
 
@@ -31,6 +31,7 @@ import { SidenavComponent } from './sidenav.component';
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
+    MatListModule,
     MatSnackBarModule,
   ],
   exports: [
@@ -45,15 +46,14 @@ import { SidenavComponent } from './sidenav.component';
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
+    MatListModule,
     MatSnackBarModule,
     FooterComponent,
     HeaderComponent,
-    MainNavComponent,
     SidenavComponent
   ],
   declarations: [
     FooterComponent,
-    MainNavComponent,
     HeaderComponent,
     SidenavComponent
   ]

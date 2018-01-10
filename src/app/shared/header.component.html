@@ -1,14 +1,16 @@
-<mat-toolbar color="primary" class="row center-xs header">
-  <div class="col-xs-3 start-xs">
+<mat-toolbar color="primary" class="row header" *ngIf="authService.isAuthenticated()">
+  <div class="col-xs-2 start-xs">
+    <span class="link" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </span>
+  </div>
+  <div class="col-xs-8 center-xs">
     <a routerLink="/" class="logo">
       <!-- <img class="logo" src="../assets/img/logo.jpg" alt="Dashboard" height="35"> -->
-      <h2>Dictionary Dashboard</h2>
+      <h4>Dictionary Dashboard</h4>
     </a>
   </div>
-  <div class="col-xs-6 center-xs">
-    <dict-main-nav></dict-main-nav>
-  </div>
-  <div class="col-xs-3 end-xs">
+  <div class="col-xs-2 end-xs">
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>

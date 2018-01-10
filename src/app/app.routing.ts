@@ -1,11 +1,10 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { SimpleLayoutComponent } from './layouts/simple-layout.component';
-import { PageNotFoundComponent } from './page-not-found.component';
-import { DashboardComponent } from './dashboard.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { DefaultLayoutComponent } from './layouts/default-layout.component';
+import { DashboardComponent } from './dashboard.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 export const routes: Routes = [
     {
@@ -20,11 +19,21 @@ export const routes: Routes = [
     },
     {
         path: 'auth',
-        component: SimpleLayoutComponent,
+        component: DefaultLayoutComponent,
         children: [
             {
                 path: '',
-                loadChildren: 'app/auth/auth.module#AuthModule'
+                loadChildren: './auth/auth.module#AuthModule'
+            }
+        ]
+    },
+    {
+        path: 'names',
+        component: DefaultLayoutComponent,
+        children: [
+            {
+                path: '',
+                loadChildren: './names/names.module#NamesModule'
             }
         ]
     },

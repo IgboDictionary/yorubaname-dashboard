@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { DefaultLayoutComponent, SimpleLayoutComponent } from './layouts';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { DashboardComponent } from './dashboard.component';
+import { NameService } from './services/name.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DashboardComponent } from './dashboard.component';
   providers: [
     AuthService,
     AuthGuardService,
+    NameService,
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy

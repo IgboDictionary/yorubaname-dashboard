@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AuthService } from '../services/auth.service';
+import { APP_NAME } from '../config/config';
 
 @Component({
   selector: 'dict-default-layout',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultLayoutComponent implements OnInit {
 
-  constructor() { }
+  isLogin = false;
+  app_name = APP_NAME;
+
+  constructor(
+    public authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  /**
+   * Logout the user
+   *
+   * @author G-Factor
+   */
+  onLogout() {
+    this.authService.logout();
+    this.router.navigate(['/auth/login']);
   }
 
 }
